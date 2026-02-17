@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>合同会社一〇（いちまる） | Web保守・運用・改善</title>
+  <meta name="description" content="WordPressを中心に、Webサービスの長期安定運用と継続改善を支援。不具合修正、表示速度改善、内部SEO、工程管理に対応。" />
+  <link rel="canonical" href="http://ichimaru.tokyo/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="合同会社一〇（いちまる）" />
+  <meta property="og:title" content="合同会社一〇（いちまる） | Web保守・運用・改善" />
+  <meta property="og:description" content="WordPressを中心に、Webサービスの長期安定運用と継続改善を支援。不具合修正、表示速度改善、内部SEO、工程管理に対応。" />
+  <meta property="og:url" content="http://ichimaru.tokyo/" />
+  <meta property="og:image" content="http://ichimaru.tokyo/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="合同会社一〇（いちまる） | Web保守・運用・改善" />
+  <meta name="twitter:description" content="WordPressを中心に、Webサービスの長期安定運用と継続改善を支援。" />
+  <meta name="twitter:image" content="http://ichimaru.tokyo/ogp.png" />
+
+  <!-- 構造化データ（JSON-LD） -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"http://ichimaru.tokyo/#org",
+        "name":"合同会社一〇（いちまる）",
+        "url":"http://ichimaru.tokyo/",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"http://ichimaru.tokyo/logo.png"
+        },
+        "email":"info@ichimaru.tokyo",
+        "address":{
+          "@type":"PostalAddress",
+          "addressRegion":"東京都",
+          "addressLocality":"江戸川区",
+          "addressCountry":"JP"
+        }
+      },
+      {
+        "@type":"WebSite",
+        "@id":"http://ichimaru.tokyo/#website",
+        "url":"http://ichimaru.tokyo/",
+        "name":"合同会社一〇（いちまる）",
+        "description":"WordPressを中心に、Webサービスの長期保守・運用・改善を支援します。",
+        "publisher":{"@id":"http://ichimaru.tokyo/#org"}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root { --max: 920px; }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height: 1.75;
+      color: #111;
+    }
+    img { max-width: 100%; height: auto; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px; }
+    .hero { padding: 38px 0 18px; border-bottom: 1px solid #e6e6e6; }
+    h1 { font-size: 28px; margin: 0 0 6px; }
+    .subtitle { margin: 0; opacity: .8; }
+
+    nav { margin-top: 16px; display:flex; gap:14px; flex-wrap:wrap; }
+    nav a { text-decoration:none; border-bottom:1px solid #ccc; padding-bottom:2px; color:#111; }
+
+    section { padding: 26px 0; border-bottom: 1px solid #f0f0f0; }
+    h2 { font-size: 20px; margin: 0 0 10px; }
+    h3 { font-size: 16px; margin: 14px 0 6px; }
+
+    ul { margin: 6px 0 0 18px; padding: 0; }
+
+    .grid { display:grid; gap:18px; grid-template-columns: 1fr; }
+    .card { border:1px solid #eee; border-radius:14px; padding:16px; }
+    .kpi { font-weight: 600; }
+    .note { font-size: 13px; opacity:.8; }
+
+    .badge { display:block; width: fit-content; padding: 2px 10px; border:1px solid #ddd; border-radius:999px; font-size: 12px; opacity:.9; }
+
+    .cta { display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px; }
+    .btn { display:inline-block; padding: 10px 14px; border-radius:12px; border:1px solid #ddd; text-decoration:none; color:#111; }
+    .btn.primary { border-color:#111; }
+
+    footer { padding: 26px 0; }
+
+    @media (min-width: 860px){
+      .grid { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 34px; }
+    }
+
+    .heroTitle{
+  margin: 8px 0 6px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+/* バッジ：改行するが、幅は内容にフィット */
+.heroTitle .badge{
+  display: block;
+  width: fit-content;          /* 100%にしない */
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  opacity: .9;
+  margin-bottom: 10px;         /* 社名との間隔 */
+}
+
+/* スマホ→PCでサイズを自然に上げる */
+@media (min-width: 860px){
+  .heroTitle{
+    font-size: 36px;           /* PC見出し */
+  }
+  .heroTitle .badge{
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<header class="wrap hero">
+  
+  <h1 class="heroTitle"><span class="badge">Web保守・運用・改善</span>合同会社一〇（いちまる）</h1>
+  <p class="subtitle">WordPressを中心に、Webサービスの長期安定運用と継続改善を支援します。</p>
+
+  <nav aria-label="ページ内メニュー">
+    <a href="#about">会社案内</a>
+    <a href="#services">対応業務</a>
+    <a href="#results">実績</a>
+    <a href="#skills">技術領域</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>会社案内</h2>
+    <p>
+      合同会社一〇は、<strong>Webサービスの長期保守・運用・改善</strong>を専門とする会社です。
+      2000年より25年以上、情報サイト・ECサイト・動画配信サービスなど、売上や会員を抱える実運用サービスの開発・保守に従事してきました。
+    </p>
+    <p>
+      サイトは「作ること」よりも<strong>止めずに守り続けること</strong>に価値があります。
+      長期安定運用と継続改善を通じて、事業を支えるWeb運用パートナーを目指しています。
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>対応業務</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Web保守・運用</h3>
+        <ul>
+          <li>WordPressサイトの保守管理</li>
+          <li>不具合修正・障害対応</li>
+          <li>セキュリティ更新対応</li>
+          <li>サーバー移行・環境調整</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>改修・改善</h3>
+        <ul>
+          <li>表示速度改善</li>
+          <li>内部SEO最適化</li>
+          <li>UI／導線改善</li>
+          <li>軽微な機能追加（PHP / JavaScript）</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>開発プロジェクト支援</h3>
+        <ul>
+          <li>外部ベンダーの工程管理</li>
+          <li>仕様調整・品質確認</li>
+          <li>リリース後の運用体制構築</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>こんな時にお声がけください</h3>
+        <ul>
+          <li>保守担当がいない／回らない</li>
+          <li>既存サイトの不具合が直らない</li>
+          <li>表示が遅くて機会損失が出ている</li>
+          <li>改修のたびに事故が怖い</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="results">
+    <h2>実績（守秘義務のため概要のみ）</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>動画配信サービス運用</h3>
+        <p class="kpi">会員数：約500名／月額課金：5,000円／年間売上規模：約3,000万円</p>
+        <p>重大障害なく、長期安定運用を継続。</p>
+      </div>
+
+      <div class="card">
+        <h3>ECサイト（開発プロジェクト管理・保守）</h3>
+        <p class="kpi">月商最大：約1,000万円</p>
+        <p>外部ベンダーの工程管理・品質確認と、リリース後の保守運用を担当。売上規模を維持した安定運用体制を確立。</p>
+      </div>
+
+      <div class="card">
+        <h3>情報サイト長期運用</h3>
+        <p class="kpi">月間最大：約140万PV</p>
+        <p>WordPress運用、表示速度改善、内部SEO最適化、継続的改修により大規模PV環境を安定稼働。</p>
+      </div>
+
+      <div class="card">
+        <h3>運用スタイル</h3>
+        <ul>
+          <li>小さく安全にリリース</li>
+          <li>ログ・再現・原因特定を重視</li>
+          <li>影響範囲を見積もって段階改修</li>
+          <li>「止めない」を最優先</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="note">※サイト名・企業名は守秘義務のため非公開です。</p>
+  </section>
+
+  <section id="skills">
+    <h2>技術領域</h2>
+    <ul>
+      <li>HTML / CSS / JavaScript</li>
+      <li>PHP / MySQL</li>
+      <li>WordPress（オリジナルテーマ・保守運用）</li>
+      <li>Git / Linux 基本操作</li>
+    </ul>
+    <p class="note">小規模〜中規模Webサービスの保守・改修を一貫して対応可能です。</p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>ご相談はメールにて承ります（原則1〜2営業日以内に返信します）。</p>
+
+    <div class="cta">
+      <a class="btn primary"
+         href="mailto:info@ichimaru.tokyo?subject=%E3%80%90%E7%9B%B8%E8%AB%87%E3%80%91Web%E4%BF%9D%E5%AE%88%E3%83%BB%E6%94%B9%E4%BF%AE%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
+        メールで問い合わせる
+      </a>
+
+      <a class="btn" href="javascript:void(0)"
+         onclick="navigator.clipboard.writeText('info@ichimaru.tokyo'); alert('メールアドレスをコピーしました');">
+        メールアドレスをコピー
+      </a>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h3>会社情報</h3>
+      <p>
+        合同会社一〇<br>
+        代表社員　和田一貴<br>
+        所在地　東京都江戸川区
+      </p>
+    </div>
+
+    <p class="note">※本番公開では http→https を推奨（S3+CloudFrontで無料SSL可）。</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p class="note">© 合同会社一〇（いちまる）</p>
+</footer>
+
+</body>
+</html>
