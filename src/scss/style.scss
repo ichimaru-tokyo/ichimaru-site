@@ -1,0 +1,101 @@
+:root { --max: 1200px; }
+body { 
+    padding:80px 0 0 0;
+    margin:0;
+    font-family: system-ui, -apple-system, "Noto Sans JP", sans-serif;
+
+    .wrap{
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0x;
+    }
+}
+header {
+    position:fixed;
+    top:0;
+    background:#464646;
+    color:#ffffff;
+    width:100%;
+    height:80px;
+
+    .wrap {
+        height:80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h1 {
+        font-size: 2.5em;
+        font-weight: normal;
+        margin: 0;
+        display:flex;
+        align-items: center;
+
+        small {
+            display: block;
+            font-size: 0.3em;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+    nav {
+        display: flex;
+        gap: 20px;
+        a {
+            color:#ffffff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin:60px 0 0 0;
+    padding: 30px 0;
+    background:#464646;
+    color:#ffffff;
+    font-size:0.8em;
+}
+
+#about {
+    padding: 60px 0 0 0;
+}
+
+#services, #results, #skills, #contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0 0 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 24px;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fafafa;
+  padding: 24px;
+  box-sizing: border-box;
+
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 1.2em;
+    line-height: 1.8;
+  }
+}
