@@ -9,6 +9,14 @@
   <meta name="description" content="WordPressを中心に、Webサービスの長期安定運用と継続改善を支援。不具合修正、表示速度改善、内部SEO、工程管理に対応。" />
   <link rel="canonical" href="http://ichimaru.tokyo/" />
 
+  <!-- reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+   <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+
   <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="合同会社一〇（いちまる）" />
@@ -198,17 +206,16 @@
     <div class="card">
 
       <form id="contactForm">
-  <input id="name" placeholder="お名前" required />
-  <input id="email" type="email" placeholder="メール" required />
-  <textarea id="message" placeholder="内容" required></textarea>
-  <button type="submit">送信</button>
-  </form>
+      <input id="name" placeholder="お名前" required />
+      <input id="email" type="email" placeholder="メール" required />
+      <textarea id="message" placeholder="内容" required></textarea>
+      <button class="btn" type="submit">送信</button>
+      <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+      </form>
 
-
-      <a class="btn"
-         href="">
-        お問い合わせフォーム
-      </a>
       <p>ご相談はメールにて承ります（原則1〜2営業日以内に返信します）。</p>
 
       <h3>会社情報</h3>
