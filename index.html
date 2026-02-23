@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="dist/css/style.css">
+  <script src="./js/main.js" defer></script>
   <title>合同会社一〇（いちまる） | Web保守・運用・改善</title>
   <meta name="description" content="WordPressを中心に、Webサービスの長期安定運用と継続改善を支援。不具合修正、表示速度改善、内部SEO、工程管理に対応。" />
   <link rel="canonical" href="http://ichimaru.tokyo/" />
@@ -61,18 +62,24 @@
 </head>
 
 <body>
-
+<div class="overlay" hidden></div>
 <header>
   <div class="wrap">
-  <h1 class="heroTitle">一〇<small>イチマル<br>Web制作・保守・運用・改善</small></h1>
-
-  <nav aria-label="ページ内メニュー">
-    <a href="#about">会社案内</a>
-    <a href="#services">対応業務</a>
-    <a href="#results">実績</a>
-    <a href="#skills">技術領域</a>
-    <a href="#contact">お問い合わせ</a>
-  </nav>
+    <h1 class="heroTitle">一〇<small>イチマル<br>Web制作・保守・運用・改善</small></h1>
+    <button class="hamburger"
+      type="button"
+      aria-label="メニューを開く"
+      aria-controls="drawer"
+      aria-expanded="false">
+      <span></span>
+    </button>
+    <nav id="drawer" class="drawer" aria-label="ページ内メニュー" aria-hidden="true">
+      <a href="#about">会社案内</a>
+      <a href="#services">対応業務</a>
+      <a href="#results">実績</a>
+      <a href="#skills">技術領域</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
   </div>
 </header>
 
@@ -126,6 +133,7 @@
       <div class="card">
         <h3>こんな時にお声がけください</h3>
         <ul>
+          <li>WordPressをテンプレートから構築したい</li>
           <li>保守担当がいない／回らない</li>
           <li>既存サイトの不具合が直らない</li>
           <li>表示が遅くて機会損失が出ている</li>
@@ -187,21 +195,22 @@
 
   <section id="contact">
     <h2>お問い合わせ</h2>
-    <p>ご相談はメールにて承ります（原則1〜2営業日以内に返信します）。</p>
+    <div class="card">
 
-    <div class="cta">
-      <a class="btn primary"
-         href="mailto:info@ichimaru.tokyo?subject=%E3%80%90%E7%9B%B8%E8%AB%87%E3%80%91Web%E4%BF%9D%E5%AE%88%E3%83%BB%E6%94%B9%E4%BF%AE%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">
-        メールで問い合わせる
+      <form id="contactForm">
+  <input id="name" placeholder="お名前" required />
+  <input id="email" type="email" placeholder="メール" required />
+  <textarea id="message" placeholder="内容" required></textarea>
+  <button type="submit">送信</button>
+  </form>
+
+
+      <a class="btn"
+         href="">
+        お問い合わせフォーム
       </a>
+      <p>ご相談はメールにて承ります（原則1〜2営業日以内に返信します）。</p>
 
-      <a class="btn" href="javascript:void(0)"
-         onclick="navigator.clipboard.writeText('info@ichimaru.tokyo'); alert('メールアドレスをコピーしました');">
-        メールアドレスをコピー
-      </a>
-    </div>
-
-    <div class="card" style="margin-top:16px;">
       <h3>会社情報</h3>
       <p>
         合同会社一〇 (イチマル)<br>
@@ -216,6 +225,40 @@
 <footer>
   © 合同会社一〇
 </footer>
+
+<script>
+const LAMBDA_URL = "https://yu2ktxbxd7ebab5g5irkcklnme0ambxq.lambda-url.ap-northeast-1.on.aws/";
+
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const res = await fetch(LAMBDA_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("送信しました！");
+      e.target.reset();
+    } else {
+      alert("送信に失敗しました");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("通信エラーが発生しました");
+  }
+});
+</script>
 
 </body>
 </html>
